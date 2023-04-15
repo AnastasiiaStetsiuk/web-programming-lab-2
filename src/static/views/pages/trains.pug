@@ -1,0 +1,57 @@
+extends ../layouts/main.pug
+
+block head
+    title Trains
+
+block body 
+    h1 Потяги
+
+    +spacer
+
+    span Додати
+    div.d-flex.gap-2.mt-2
+        input#train-add-name-input(type="text" placeholder="Імʼя").form-control
+        input#train-add-route-input(type="text" placeholder="Маршрут").form-control
+        input#train-add-number-input(type="text" placeholder="Номер").form-control
+        button#train-add-button.btn.btn-primary Додати потяг
+
+    +spacer
+
+    span Редагувати
+    div.d-flex.gap-2.mt-2
+        input#train-edit-id-input(type="text" placeholder="ID").form-control
+        input#train-add-name-input(type="text" placeholder="Імʼя").form-control
+        input#train-add-route-input(type="text" placeholder="Маршрут").form-control
+        input#train-add-number-input(type="text" placeholder="Номер").form-control
+        button#train-edit-button.btn.btn-success Редагувати потяг
+
+    +spacer
+
+    span Видалити
+    div.d-flex.gap-2.mt-2
+        input#train-remove-input(type="text" placeholder="ID").form-control
+        button#train-remove-button.btn.btn-danger Видалити потяг
+
+    +spacer
+
+    span Пошук
+    div.d-flex.gap-2.mt-2
+        input#train-search-input(type="text" placeholder="ID, імʼя, маршрут, номер").form-control
+
+    +spacer
+
+    strong
+        span#train-log
+
+    +spacer
+
+    table.table
+        thead
+            tr
+                th(scope="col") #
+                th(scope="col") Імʼя
+                th(scope="col") Маршрут
+                th(scope="col") Номер
+        tbody#train-table
+    
+    +spacer

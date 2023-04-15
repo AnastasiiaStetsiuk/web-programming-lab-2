@@ -1,0 +1,54 @@
+extends ../layouts/main.pug
+
+block head
+    title Tickets
+
+block body 
+    h1 Квитки
+
+    +spacer
+
+    span Додати
+    div.d-flex.gap-2.mt-2
+        input#ticket-add-number-input(type="text" placeholder="Номер").form-control
+        input#ticket-add-price-input(type="text" placeholder="Ціна").form-control
+        button#ticket-add-button.btn.btn-primary Додати квиток
+
+    +spacer
+
+    span Редагувати
+    div.d-flex.gap-2.mt-2
+        input#ticket-edit-id-input(type="text" placeholder="ID").form-control
+        input#ticket-edit-number-input(type="text" placeholder="Номер").form-control
+        input#ticket-edit-price-input(type="text" placeholder="Ціна").form-control
+        button#ticket-edit-button.btn.btn-success Редагувати квиток
+
+    +spacer
+
+    span Видалити
+    div.d-flex.gap-2.mt-2
+        input#ticket-remove-input(type="text" placeholder="ID").form-control
+        button#ticket-remove-button.btn.btn-danger Видалити квиток
+
+    +spacer
+
+    span Пошук
+    div.d-flex.gap-2.mt-2
+        input#ticket-search-input(type="text" placeholder="ID, ціна, номер").form-control
+
+    +spacer
+
+    strong
+        span#ticket-log
+
+    +spacer
+
+    table.table
+        thead
+            tr
+                th(scope="col") #
+                th(scope="col") Номер
+                th(scope="col") Ціна
+        tbody#ticket-table
+    
+    +spacer

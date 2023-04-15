@@ -1,0 +1,75 @@
+extends ../layouts/main.pug
+
+block head
+    title Sold Tickets
+
+block body 
+    h1 Продані квитки
+
+    +spacer
+
+    span Додати
+    div.d-flex.gap-2.mt-2
+        input#soldTickets-add-passenger-input(type="text" placeholder="ID Пасажира").form-control
+        input#soldTickets-add-train-input(type="text" placeholder="ID Потяга").form-control
+        input#soldTickets-add-ticket-input(type="text" placeholder="ID Квитка").form-control
+        input#soldTickets-add-date-input(type="text" placeholder="Дата dd.mm.yyyy").form-control
+        button#soldTickets-add-button.btn.btn-primary Додати квиток
+
+    +spacer
+
+    span Редагувати
+    div.d-flex.gap-2.mt-2
+        input#soldTickets-edit-id-input(type="text" placeholder="ID").form-control
+        input#soldTickets-edit-passenger-input(type="text" placeholder="ID Пасажира").form-control
+        input#soldTickets-edit-train-input(type="text" placeholder="ID Потяга").form-control
+        input#soldTickets-edit-ticket-input(type="text" placeholder="ID Квитка").form-control
+        input#soldTickets-edit-date-input(type="text" placeholder="Дата dd.mm.yyyy").form-control
+        button#soldTickets-edit-button.btn.btn-success Редагувати квиток
+
+    +spacer
+
+    span Видалити
+    div.d-flex.gap-2.mt-2
+        input#soldTickets-remove-input(type="text" placeholder="ID").form-control
+        button#soldTickets-remove-button.btn.btn-danger Видалити квиток
+
+    +spacer
+
+    span Пошук
+    div.d-flex.gap-2.mt-2
+        input#soldTickets-search-input(type="text" placeholder="").form-control
+
+    +spacer
+
+    strong
+        span#soldTickets-log
+
+    +spacer
+
+    table.table
+        thead
+            tr
+                th(scope="col") #
+                th(scope="col") ID Пасажира
+                th(scope="col") ID Потяга
+                th(scope="col") ID Квитка
+                th(scope="col") Дата
+        tbody#soldTickets-table
+
+    +spacer
+
+    span Популярні маршрути
+    ul#soldTickets-popular-routes
+
+    +spacer
+
+    span Прибуткові маршрути
+    ul#soldTickets-profitable-routes
+
+    +spacer
+
+    span Пусті маршрути
+    ul#soldTickets-empty-routes
+    
+    +spacer

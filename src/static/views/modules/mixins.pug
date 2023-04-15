@@ -1,0 +1,11 @@
+mixin spacer()
+    div.py-2
+
+mixin button-add(id, text)
+    button(id=id).btn.btn-primary= text
+
+mixin button-edit(id, text)
+    button(id=id).btn.btn-success= text
+
+mixin button-remove(id, text)
+    button(id=id).btn.btn-danger= text

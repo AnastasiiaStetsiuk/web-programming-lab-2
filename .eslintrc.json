@@ -1,0 +1,20 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "extends": ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
+    "rules": {
+        "indent": ["off", 4],
+        "no-console": "off",
+        "no-unused-vars": "off",
+        "no-eval": "error",
+        "no-use-before-define": "off",
+        "no-shadow": "off"
+    }
+}
